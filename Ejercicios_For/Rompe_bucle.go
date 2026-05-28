@@ -6,7 +6,7 @@ func main() {
 	logsProcesados := 1
 
 	for {
-		fmt.Println("Analizando log número ")
+		fmt.Println("Analizando log número ", logsProcesados)
 		if logsProcesados == 3 {
 			fmt.Println("¡Amenaza detectada! Deteniendo análisis.")
 			break
