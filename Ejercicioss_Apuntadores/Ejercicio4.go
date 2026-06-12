@@ -1,17 +1,20 @@
+//Ejercicio apuntadores
+
 package main
 
 import "fmt"
 
+func limpiarinput(valor *string) {
+	*valor = "Hola"
+}
+
 func main() {
-	firewallActivo := true
-	ptrFw := &firewallActivo
+	//La real
+	variable := "Hector"
+	fmt.Println("Valor de la variable: ", variable)
+	//La modificada
 
-	//Valor modificado
-	*ptrFw = false
+	limpiarinput(&variable)
+	fmt.Println("Valor de la variable: ", variable)
 
-	if firewallActivo == true {
-		fmt.Println(" Firewall activado")
-	} else {
-		fmt.Println("Firewall desactivado")
-	}
 }
