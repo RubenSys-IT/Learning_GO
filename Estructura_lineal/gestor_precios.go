@@ -17,7 +17,6 @@ func main() {
 
 	caro := precios[2:4] // Vista con [60, 80]
 
-	// ⚠️ TE FALTABA ESTO: ¡Llamar a la función!
 	aplicardecuento(caro)
 
 	fmt.Println("Original (cambiado por la vista):", precios)  // [10 25 50 70 15]
