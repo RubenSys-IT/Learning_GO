@@ -7,14 +7,14 @@ import (
 
 func main() {
 	servicios := []scanner.Servicio{
-		{Nombre: "FTP", Puerto: 21, Abierto: true},
-		{Nombre: "SSH", Puerto: 22, Abierto: true},
-		{Nombre: "HTTP", Puerto: 80, Abierto: true},
-		{Nombre: "TELNET", Puerto: 23, Abierto: false},
+		{Puerto: 21, Activo: true},
+		{Puerto: 22, Activo: true},
+		{Puerto: 80, Activo: true},
+		{Puerto: 23, Activo: false},
 	}
 
 	totalAlertas := 0
-	resultado := scanner.EvaluarServicios(servicios, &totalAlertas)
+	resultado := scanner.firewall(servicios, &totalAlertas)
 
 	fmt.Println("Resultados del escaneo:", resultado)
 	fmt.Println("El total de alertas es:", totalAlertas)
